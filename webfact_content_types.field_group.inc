@@ -21,12 +21,12 @@ function webfact_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(
       0 => 'field_docker_environment',
-      1 => 'field_docker_volumes',
-      2 => 'field_docker_image',
-      3 => 'field_docker_ports',
+      1 => 'field_docker_image',
+      2 => 'field_docker_ports',
+      3 => 'field_docker_volumes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
