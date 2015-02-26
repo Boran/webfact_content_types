@@ -258,7 +258,7 @@ e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -300,7 +300,7 @@ e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -462,7 +462,7 @@ Note: Stop and start the container to apply changes to this setting.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -596,7 +596,51 @@ Note: this must be in lowercase.
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-website-field_public'
+  $field_instances['node-website-field_public'] = array(
+    'bundle' => 'website',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => 'Denotes if this website is accessible to the general public ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_public',
+    'label' => 'Public',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
     ),
   );
 
@@ -642,7 +686,53 @@ Note: this must be in lowercase.
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-website-field_site_owner_uid'
+  $field_instances['node-website-field_site_owner_uid'] = array(
+    'bundle' => 'website',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The UID of the site owner/creator',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_site_owner_uid',
+    'label' => 'Site owner uid',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 3,
     ),
   );
 
@@ -691,7 +781,7 @@ Note: this must be in lowercase.
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -700,6 +790,7 @@ Note: this must be in lowercase.
   t('A small picture used only on the webfactory management page.');
   t('Auto-start');
   t('Category');
+  t('Denotes if this website is accessible to the general public ');
   t('Description');
   t('Docker Environment');
   t('Docker Image');
@@ -723,12 +814,15 @@ Note: prefer setting volumes on the template level.');
   t('Mapping of container exposed ports to public ports');
   t('Mapping of container exposed ports to public ports.');
   t('Notes');
+  t('Public');
   t('Should the container be automatically started? The behaviour to apply when the container exits, or docker is booted. Choose "always" or "on-failure" ( to restart only when the container exit code is non-zero). Production containers should have "always" and test containers "on-failure" to save resources. 
 Note: Stop and start the container to apply changes to this setting.');
   t('Site email');
+  t('Site owner uid');
   t('Template');
   t('Template for building the website. Alternatively see the Advanced section below.');
   t('The Production categories indicates high availability requirements.');
+  t('The UID of the site owner/creator');
   t('The docker base image to build the container from - a local or hub.docker.com name e.g. boran/drupal, inno/drupal');
   t('You new website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.corproot.net.ch)
 Note: this must be in lowercase. 
