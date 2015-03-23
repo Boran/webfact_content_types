@@ -262,48 +262,6 @@ e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github
     ),
   );
 
-  // Exported field_instance: 'node-website-field_category'
-  $field_instances['node-website-field_category'] = array(
-    'bundle' => 'website',
-    'default_value' => array(
-      0 => array(
-        'tid' => 2,
-      ),
-    ),
-    'default_value_label_token' => 0,
-    'deleted' => 0,
-    'description' => 'The Production categories indicates high availability requirements.',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-website-field_docker_environment'
   $field_instances['node-website-field_docker_environment'] = array(
     'bundle' => 'website',
@@ -789,7 +747,6 @@ Note: this must be in lowercase.
   // Included for use with string extractors like potx.
   t('A small picture used only on the webfactory management page.');
   t('Auto-start');
-  t('Category');
   t('Denotes if this website is accessible to the general public ');
   t('Description');
   t('Docker Environment');
@@ -821,7 +778,6 @@ Note: Stop and start the container to apply changes to this setting.');
   t('Site owner uid');
   t('Template');
   t('Template for building the website. Alternatively see the Advanced section below.');
-  t('The Production categories indicates high availability requirements.');
   t('The UID of the site owner/creator');
   t('The docker base image to build the container from - a local or hub.docker.com name e.g. boran/drupal, inno/drupal');
   t('You new website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.corproot.net.ch)
