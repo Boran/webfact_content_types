@@ -471,8 +471,8 @@ Note: prefer setting volumes on the template level.',
     'bundle' => 'website',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'You new website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.corproot.net.ch)
-Note: this must be in lowercase. 
+    'description' => 'The website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.example.ch)
+The name must be valid DNS: lowercase letters, optionally with numbers or a dash. 
 ',
     'display' => array(
       'default' => array(
