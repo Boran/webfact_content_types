@@ -34,6 +34,7 @@ function webfact_content_types_field_group_info() {
         'classes' => 'group-api field-group-fieldset',
         'required_fields' => 1,
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_api|node|website|form'] = $field_group;
