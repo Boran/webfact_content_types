@@ -258,7 +258,49 @@ e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 9,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-website-field_category'
+  $field_instances['node-website-field_category'] = array(
+    'bundle' => 'website',
+    'default_value' => array(
+      0 => array(
+        'tid' => 1,
+      ),
+    ),
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => 'The Production categories indicates high availability requirements.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
     ),
   );
 
@@ -298,7 +340,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -338,7 +380,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 15,
     ),
   );
 
@@ -377,7 +419,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 18,
     ),
   );
 
@@ -420,7 +462,7 @@ Note: Stop and start the container to apply changes to this setting.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -462,7 +504,7 @@ Note: prefer setting volumes on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 17,
     ),
   );
 
@@ -554,7 +596,51 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-website-field_not_drupal'
+  $field_instances['node-website-field_not_drupal'] = array(
+    'bundle' => 'website',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => 'Is this container for a Drupal website? If enabled, Drupal specific menus and behaviour will be disabled.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_not_drupal',
+    'label' => 'Not Drupal?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 19,
     ),
   );
 
@@ -644,7 +730,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -739,7 +825,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -747,6 +833,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
   // Included for use with string extractors like potx.
   t('A small picture used only on the webfactory management page.');
   t('Auto-start');
+  t('Category');
   t('Denotes if this website is accessible to the general public ');
   t('Description');
   t('Docker Environment');
@@ -757,6 +844,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
   t('Image');
   t('Initial email for the website configuration ("from" address) and the "admin" user.
 ');
+  t('Is this container for a Drupal website? If enabled, Drupal specific menus and behaviour will be disabled.');
   t('List of environment key=value pairs, to pass to docker when creating the container.
 e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github.com/Boran/docker-drupal');
   t('List of environment key=value pairs.
@@ -770,6 +858,7 @@ Note: prefer setting environment variables on the template level.');
 Note: prefer setting volumes on the template level.');
   t('Mapping of container exposed ports to public ports');
   t('Mapping of container exposed ports to public ports.');
+  t('Not Drupal?');
   t('Notes');
   t('Public');
   t('Should the container be automatically started? The behaviour to apply when the container exits, or docker is booted. Choose "always" or "on-failure" ( to restart only when the container exit code is non-zero). Production containers should have "always" and test containers "on-failure" to save resources. 
@@ -778,10 +867,11 @@ Note: Stop and start the container to apply changes to this setting.');
   t('Site owner uid');
   t('Template');
   t('Template for building the website. Alternatively see the Advanced section below.');
+  t('The Production categories indicates high availability requirements.');
   t('The UID of the site owner/creator');
   t('The docker base image to build the container from - a local or hub.docker.com name e.g. boran/drupal, inno/drupal');
-  t('You new website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.corproot.net.ch)
-Note: this must be in lowercase. 
+  t('The website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.example.ch)
+The name must be valid DNS: lowercase letters, optionally with numbers or a dash. 
 ');
 
   return $field_instances;
