@@ -28,13 +28,12 @@ function webfact_content_types_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-api field-group-fieldset',
         'required_fields' => 1,
       ),
-      'formatter' => 'collapsed',
     ),
   );
   $export['group_api|node|website|form'] = $field_group;
