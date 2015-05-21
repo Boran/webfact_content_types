@@ -389,7 +389,7 @@ Note: prefer setting environment variables on the template level.',
     'bundle' => 'website',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Mapping of container exposed ports to public ports. format SERVER_PORT_NR:CONTAINER_PORT_NR, e.g. 8000:80',
+    'description' => 'Mapping of container exposed ports to public ports. format CONTAINER_PORT:SERVER_PORT, e.g. 80:8000',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -857,7 +857,7 @@ Note: prefer setting environment variables on the template level.');
 /serverdir/ssh/id_rsa.pub:/contdir/id_rsa.pub:ro
 Note: prefer setting volumes on the template level.');
   t('Mapping of container exposed ports to public ports.');
-  t('Mapping of container exposed ports to public ports. format SERVER_PORT_NR:CONTAINER_PORT_NR, e.g. 8000:80');
+  t('Mapping of container exposed ports to public ports. format CONTAINER_PORT:SERVER_PORT, e.g. 80:8000');
   t('Not Drupal?');
   t('Notes');
   t('Public');
