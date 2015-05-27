@@ -378,8 +378,8 @@ function webfact_content_types_views_default_views() {
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = 'Website link';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_hostname].webfact.corproot.net';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Website';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'from tpl';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = 'http://[field_hostname].webfact.corproot.net';
   $handler->display->display_options['fields']['nothing']['alter']['external'] = TRUE;
