@@ -26,12 +26,12 @@ function webfact_content_types_field_group_info() {
       0 => 'field_public',
       1 => 'field_site_owner_uid',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsed',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-api field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -57,15 +57,14 @@ function webfact_content_types_field_group_info() {
       3 => 'field_docker_ports',
       4 => 'field_not_drupal',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Advanced',
+      'formatter' => 'closed',
       'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
         'required_fields' => 1,
-        'classes' => 'group-template field-group-fieldset',
-        'description' => 'Custom docker configuration: If not using a template or to override template settings.',
       ),
-      'formatter' => 'collapsed',
     ),
   );
   $export['group_template|node|website|form'] = $field_group;
