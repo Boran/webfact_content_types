@@ -16,5 +16,11 @@ function webfact_content_types_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: Sites admin.
+  $roles['Sites admin'] = array(
+    'name' => 'Sites admin',
+    'weight' => 4,
+  );
+
   return $roles;
 }
