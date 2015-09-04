@@ -274,6 +274,22 @@ function webfact_content_types_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_memory'
+  $field_bases['field_memory'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_memory',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_not_drupal'
   $field_bases['field_not_drupal'] = array(
     'active' => 1,

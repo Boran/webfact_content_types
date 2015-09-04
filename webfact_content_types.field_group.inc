@@ -41,6 +41,33 @@ function webfact_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_resources|node|website|form';
+  $field_group->group_name = 'group_resources';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'website';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Resources',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_memory',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-resources field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_resources|node|website|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_template|node|website|form';
   $field_group->group_name = 'group_template';
   $field_group->entity_type = 'node';
@@ -49,7 +76,7 @@ function webfact_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_docker_environment',
       1 => 'field_docker_volumes',

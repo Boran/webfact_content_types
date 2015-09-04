@@ -316,7 +316,7 @@ Note: prefer setting environment variables on the template level.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -352,7 +352,7 @@ Note: prefer setting environment variables on the template level.',
     'description' => 'The docker base image to build the container from - a local or hub.docker.com name e.g. boran/drupal, inno/drupal',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -395,7 +395,7 @@ Note: prefer setting environment variables on the template level.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -437,7 +437,7 @@ Note: prefer setting environment variables on the template level.',
 Note: Stop and start the container to apply changes to this setting.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -480,7 +480,7 @@ Note: prefer setting volumes on the template level.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -600,6 +600,56 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     ),
   );
 
+  // Exported field_instance: 'node-website-field_memory'
+  $field_instances['node-website-field_memory'] = array(
+    'bundle' => 'website',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Limit: Maximum memory (default unlimited)',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_memory',
+    'label' => 'Memory',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => 0,
+      'prefix' => '',
+      'suffix' => 'MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-website-field_not_drupal'
   $field_instances['node-website-field_not_drupal'] = array(
     'bundle' => 'website',
@@ -610,14 +660,14 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     ),
     'default_value_label_token' => 0,
     'deleted' => 0,
-    'description' => 'Is this container for a Drupal website? If enabled, Drupal specific menus and behaviour will be disabled.',
+    'description' => 'Is this container for a Drupal website? Drupal specific menus and behaviour can be disabled is not needed.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -628,7 +678,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     ),
     'entity_type' => 'node',
     'field_name' => 'field_not_drupal',
-    'label' => 'Not Drupal?',
+    'label' => 'Not Drupal',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -657,11 +707,11 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     'description' => 'Denotes if this website is accessible to the general public ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -742,7 +792,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     'description' => 'The UID of the site owner/creator',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -751,7 +801,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 12,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -793,7 +843,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     'description' => 'Template for building the website. Alternatively see the Advanced section below.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -844,7 +894,8 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
   t('Image');
   t('Initial email for the website configuration ("from" address) and the "admin" user.
 ');
-  t('Is this container for a Drupal website? If enabled, Drupal specific menus and behaviour will be disabled.');
+  t('Is this container for a Drupal website? Drupal specific menus and behaviour can be disabled is not needed.');
+  t('Limit: Maximum memory (default unlimited)');
   t('List of environment key=value pairs, to pass to docker when creating the container.
 e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github.com/Boran/docker-drupal');
   t('List of environment key=value pairs.
@@ -858,7 +909,8 @@ Note: prefer setting environment variables on the template level.');
 Note: prefer setting volumes on the template level.');
   t('Mapping of container exposed ports to public ports.');
   t('Mapping of container exposed ports to public ports. format CONTAINER_PORT:SERVER_PORT, e.g. 80:8000');
-  t('Not Drupal?');
+  t('Memory');
+  t('Not Drupal');
   t('Notes');
   t('Public');
   t('Should the container be automatically started? The behaviour to apply when the container exits, or docker is booted. Choose "always" or "on-failure" ( to restart only when the container exit code is non-zero). Production containers should have "always" and test containers "on-failure" to save resources. 

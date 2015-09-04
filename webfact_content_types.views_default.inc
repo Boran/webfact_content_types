@@ -133,8 +133,9 @@ function webfact_content_types_views_default_views() {
     'nothing_4' => 'nothing_4',
     'name' => 'name',
     'term_node_tid' => 'term_node_tid',
+    'changed' => 'changed',
   );
-  $handler->display->display_options['style_options']['default'] = 'title';
+  $handler->display->display_options['style_options']['default'] = 'changed';
   $handler->display->display_options['style_options']['info'] = array(
     'nid' => array(
       'sortable' => 0,
@@ -202,6 +203,13 @@ function webfact_content_types_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 1,
+    ),
+    'changed' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
     ),
   );
   $handler->display->display_options['style_options']['sticky'] = TRUE;
@@ -312,6 +320,14 @@ function webfact_content_types_views_default_views() {
     'category' => 'category',
     'tags' => 0,
   );
+  /* Field: Content: Updated date */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = 'Updated';
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'm.d.Y';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
