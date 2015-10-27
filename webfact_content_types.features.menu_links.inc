@@ -44,11 +44,11 @@ function webfact_content_types_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Templates');
   t('Websites');
-
 
   return $menu_links;
 }

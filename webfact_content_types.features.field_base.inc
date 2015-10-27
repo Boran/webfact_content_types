@@ -19,14 +19,6 @@ function webfact_content_types_field_default_field_bases() {
       0 => 'node',
     ),
     'field_name' => 'body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -46,14 +38,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_category',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -73,6 +57,31 @@ function webfact_content_types_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_container_api'
+  $field_bases['field_container_api'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_container_api',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'Docker API',
+        1 => 'Mesos Marathon API',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_docker_environment'
   $field_bases['field_docker_environment'] = array(
     'active' => 1,
@@ -80,14 +89,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_docker_environment',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -109,14 +110,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_docker_image',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -138,14 +131,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_docker_ports',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -167,7 +152,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_docker_restartpolicy',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -193,14 +177,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_docker_volumes',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -222,14 +198,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_hostname',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -251,14 +219,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -274,6 +234,27 @@ function webfact_content_types_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_marathon_name'
+  $field_bases['field_marathon_name'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_marathon_name',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_memory'
   $field_bases['field_memory'] = array(
     'active' => 1,
@@ -281,7 +262,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_memory',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -297,7 +277,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_not_drupal',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -323,7 +302,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_public',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -349,14 +327,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_site_email',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -378,7 +348,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_site_owner_uid',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -394,14 +363,6 @@ function webfact_content_types_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_template',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

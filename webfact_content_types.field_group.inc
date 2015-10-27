@@ -21,7 +21,7 @@ function webfact_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'API',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_public',
       1 => 'field_site_owner_uid',
@@ -79,10 +79,12 @@ function webfact_content_types_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_docker_environment',
-      1 => 'field_docker_volumes',
-      2 => 'field_docker_image',
-      3 => 'field_docker_ports',
+      1 => 'field_docker_image',
+      2 => 'field_docker_ports',
+      3 => 'field_docker_volumes',
       4 => 'field_not_drupal',
+      5 => 'field_container_api',
+      6 => 'field_marathon_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
