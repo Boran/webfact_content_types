@@ -304,48 +304,6 @@ e.g. DRUPAL_* variable for the  boran/drupal container image, see https://github
     ),
   );
 
-  // Exported field_instance: 'node-website-field_container_api'
-  $field_instances['node-website-field_container_api'] = array(
-    'bundle' => 'website',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'default_value_label_token' => 0,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_container_api',
-    'label' => 'Container API',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 19,
-    ),
-  );
-
   // Exported field_instance: 'node-website-field_docker_environment'
   $field_instances['node-website-field_docker_environment'] = array(
     'bundle' => 'website',
@@ -968,7 +926,6 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
   t('A small picture used only on the webfactory management page.');
   t('Auto-start');
   t('Category');
-  t('Container API');
   t('Denotes if this website is accessible to the general public ');
   t('Description');
   t('Docker Environment');
