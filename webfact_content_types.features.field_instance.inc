@@ -316,7 +316,7 @@ Note: prefer setting environment variables on the template level.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -340,7 +340,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 22,
     ),
   );
 
@@ -380,7 +380,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 15,
+      'weight' => 21,
     ),
   );
 
@@ -393,9 +393,10 @@ Note: prefer setting environment variables on the template level.',
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
+        'type' => 'text_default',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -419,7 +420,7 @@ Note: prefer setting environment variables on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 24,
     ),
   );
 
@@ -478,9 +479,10 @@ Note: prefer setting volumes on the template level.',
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'type' => 'text_default',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -504,7 +506,7 @@ Note: prefer setting volumes on the template level.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 17,
+      'weight' => 23,
     ),
   );
 
@@ -513,8 +515,8 @@ Note: prefer setting volumes on the template level.',
     'bundle' => 'website',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.example.ch)
-The name must be valid DNS: lowercase letters, optionally with numbers or a dash. 
+    'description' => 'The website will have this name prefixed to the webfactory domain (e.g. http://SOMETHING.webfact.example.ch)
+The name must be valid DNS: lowercase letters, optionally with numbers or a dash and have maximum 14 characters.
 ',
     'display' => array(
       'default' => array(
@@ -543,7 +545,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 14,
       ),
       'type' => 'text_textfield',
       'weight' => 1,
@@ -597,6 +599,51 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
       ),
       'type' => 'image_image',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-website-field_marathon_name'
+  $field_instances['node-website-field_marathon_name'] = array(
+    'bundle' => 'website',
+    'default_value' => array(
+      0 => array(
+        'value' => '[node:field_hostname]',
+      ),
+    ),
+    'default_value_function' => 'field_default_token_default_value_function',
+    'deleted' => 0,
+    'description' => '(for Marathon API only) Unique ID to identify the app/container, initially the same as the hostname above. Should be limited to 14 chars also.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_marathon_name',
+    'label' => 'Marathon app name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 14,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 20,
     ),
   );
 
@@ -667,7 +714,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -690,7 +737,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 19,
+      'weight' => 25,
     ),
   );
 
@@ -793,15 +840,9 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 10,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -881,6 +922,7 @@ The name must be valid DNS: lowercase letters, optionally with numbers or a dash
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('(for Marathon API only) Unique ID to identify the app/container, initially the same as the hostname above. Should be limited to 14 chars also.');
   t('A small picture used only on the webfactory management page.');
   t('Auto-start');
   t('Category');
@@ -909,6 +951,7 @@ Note: prefer setting environment variables on the template level.');
 Note: prefer setting volumes on the template level.');
   t('Mapping of container exposed ports to public ports.');
   t('Mapping of container exposed ports to public ports. format CONTAINER_PORT:SERVER_PORT, e.g. 80:8000');
+  t('Marathon app name');
   t('Memory');
   t('Not Drupal');
   t('Notes');
@@ -922,8 +965,8 @@ Note: Stop and start the container to apply changes to this setting.');
   t('The Production categories indicates high availability requirements.');
   t('The UID of the site owner/creator');
   t('The docker base image to build the container from - a local or hub.docker.com name e.g. boran/drupal, inno/drupal');
-  t('The website will have this name prefixed to the webfactory domain (e.g. http://something.webfact.example.ch)
-The name must be valid DNS: lowercase letters, optionally with numbers or a dash. 
+  t('The website will have this name prefixed to the webfactory domain (e.g. http://SOMETHING.webfact.example.ch)
+The name must be valid DNS: lowercase letters, optionally with numbers or a dash and have maximum 14 characters.
 ');
 
   return $field_instances;
